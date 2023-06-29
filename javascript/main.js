@@ -13,22 +13,24 @@ function setTime() {
 
 setInterval(setTime, 1000);
 
-function createKeyboardBlock() {
-  const boardBlock = document.createElement("div");
-  boardBlock.className = "board-block";
-  return boardBlock;
+function createKeyboardColumn(rowIdx, colIdx) {
+  const boardColumn = document.createElement("div");
+  boardColumn.className = "board-column";
+  boardColumn.setAttribute("row-index", rowIdx);
+  boardColumn.setAttribute("col-index", colIdx);
+  return boardColumn;
 }
 
-function createKeyboardRow() {
+function createKeyboardRow(rowIdx) {
   const boardRow = document.createElement("div");
   boardRow.className = "board-row";
 
   for (let i = 0; i < 5; i++) {
-    boardRow.appendChild(createKeyboardBlock());
+    boardRow.appendChild(createKeyboardColumn(rowIdx, i));
   }
   return boardRow;
 }
 
 for (let i = 0; i < 6; i++) {
-  mainBlock.appendChild(createKeyboardRow());
+  mainBlock.appendChild(createKeyboardRow(i));
 }

@@ -4,26 +4,25 @@ const keyboardItemsRow1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
 const keyboardItemsRow2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
 const keyboardItemsRow3 = ["ENTER", "Z", "X", "C", "V", "B", "N", "M", "BACK"];
 
-function createKeyboardBlock(text) {
-  const keyboardBlock = document.createElement("div");
-  keyboardBlock.className = "keyboard-block";
+function createKeyboardColumn(text) {
+  const keyboardColumn = document.createElement("div");
+  keyboardColumn.className = "keyboard-column";
+  keyboardColumn.setAttribute("data-key", text);
 
   if (text === "ENTER") {
-    keyboardBlock.style.width = "80px";
-    keyboardBlock.innerText = text;
+    keyboardColumn.className = "keyboard-column wide";
+    keyboardColumn.innerText = text;
   } else if (text === "BACK") {
-    keyboardBlock.style.width = "80px";
+    keyboardColumn.className = "keyboard-column wide";
     const img = document.createElement("img");
     img.src = "assets/backspace.svg";
     img.alt = "backspace";
-    img.style.width = "30px";
-    keyboardBlock.appendChild(img);
+    keyboardColumn.appendChild(img);
   } else {
-    keyboardBlock.style.width = "50px";
-    keyboardBlock.innerText = text;
+    keyboardColumn.innerText = text;
   }
 
-  return keyboardBlock;
+  return keyboardColumn;
 }
 
 function createKeyboardRow(items) {
@@ -31,7 +30,7 @@ function createKeyboardRow(items) {
   keyboardRow.className = "keyboard-row";
 
   for (let i = 0; i < items.length; i++) {
-    keyboardRow.appendChild(createKeyboardBlock(items[i]));
+    keyboardRow.appendChild(createKeyboardColumn(items[i]));
   }
   return keyboardRow;
 }

@@ -1,14 +1,22 @@
-.keyboard-block {
+.keyboard-column {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  width: 50px;
   height: 60px;
   border-radius: 10px;
   background-color: lightgray;
   margin: 2px;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
+}
+
+.wide {
+  width: 80px;
+}
+
+.keyboard-column img {
+  width: 30px;
 }
 
 .keyboard-row {
