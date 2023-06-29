@@ -1,3 +1,10 @@
 @import "header.css";
 @import "main.css";
 @import "footer.css";
+
+:root {
+  --color-lightgray: #d4d6da;
+  --color-gray: #797c7e;
+  --color-yellow: #c6b466;
+  --color-green: #79a76b;
+}
