@@ -1,0 +1,23 @@
+main {
+  margin: 40px 0px 20px 0px;
+}
+
+.timer {
+  width: 100vw;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 10px;
+}
+
+.board-block {
+  width: 60px;
+  height: 60px;
+  border: 3px solid lightgray;
+  margin: 2px;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

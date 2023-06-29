@@ -1,0 +1,34 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 10px;
+}
+
+.header-menu {
+  width: 120px;
+}
+
+.header-menu img {
+  width: 30px;
+}
+
+.header-title {
+  font-family: "Caprasimo", cursive;
+  font-size: 30px;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 120px;
+}
+
+.header-icons__img {
+  margin-left: 5px;
+}
+
+.header-icons__img img {
+  width: 30px;
+}
